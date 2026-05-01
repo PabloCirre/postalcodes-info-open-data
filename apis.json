@@ -1,0 +1,49 @@
+{
+  "name": "PostalCodes.info",
+  "description": "Postal-code lookup, search, country exports and address validation workflows for global postal data.",
+  "url": "https://raw.githubusercontent.com/PabloCirre/postalcodes-info-open-data/main/apis.json",
+  "image": "https://postalcodes.info/assets/images/og-main.png",
+  "tags": [
+    "postal codes",
+    "geocoding",
+    "open data",
+    "address validation",
+    "logistics"
+  ],
+  "created": "2026-05-01",
+  "modified": "2026-05-01",
+  "specificationVersion": "0.19",
+  "apis": [
+    {
+      "name": "PostalCodes.info API",
+      "description": "Developer documentation and same-host JSON access patterns for postal-code lookup, search, country exports and address validation workflows.",
+      "humanURL": "https://postalcodes.info/api",
+      "baseURL": "https://postalcodes.info",
+      "tags": [
+        "postal codes",
+        "geocoding",
+        "datasets"
+      ],
+      "properties": [
+        {
+          "type": "Documentation",
+          "url": "https://postalcodes.info/api"
+        },
+        {
+          "type": "Dataset Documentation",
+          "url": "https://postalcodes.info/datasets"
+        },
+        {
+          "type": "Terms of Service",
+          "url": "https://postalcodes.info/terms"
+        }
+      ]
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "PostalCodes.info",
+      "url": "https://postalcodes.info/contact"
+    }
+  ]
+}

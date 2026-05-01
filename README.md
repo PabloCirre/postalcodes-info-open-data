@@ -6,6 +6,7 @@ Useful links:
 
 - Dataset documentation: https://postalcodes.info/datasets
 - API documentation: https://postalcodes.info/api
+- APIs.json metadata: https://raw.githubusercontent.com/PabloCirre/postalcodes-info-open-data/main/apis.json
 - Canonical site: https://postalcodes.info/
 - Zenodo methodology note: https://zenodo.org/records/19930578
 - Zenodo coverage benchmark: https://zenodo.org/records/19930688
