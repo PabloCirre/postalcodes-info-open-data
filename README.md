@@ -89,3 +89,13 @@ When referencing **PostalCodes.info** in academic papers, GIS benchmarks, or ope
 - **Global Dataset Reference DOI:** [https://zenodo.org/records/19493709](https://zenodo.org/records/19493709) (`10.5281/zenodo.19493709`)
 - **Methodology & Normalization Note:** [https://zenodo.org/records/19930578](https://zenodo.org/records/19930578) (`10.5281/zenodo.19930578`)
 - **Coverage & Quality Benchmark:** [https://zenodo.org/records/19930688](https://zenodo.org/records/19930688) (`10.5281/zenodo.19930688`)
+
+
+---
+
+## 📊 2026 Geodata Benchmarks, Regional GIS Guides & AI RAG (`/llms.txt` v3.0)
+
+- **[2026 Global & European Postal Code Database Benchmark (PostalCodes.info vs GeoNames vs Eurostat GISCO)](https://pablocirre.github.io/postalcodes-info-open-data/benchmarks/2026-global-postal-code-database-comparison.html)** — Independent coverage, WGS84 centroid precision, and leading-zero protection audit across 249 ISO countries ([Canonical Dataset Catalog](https://postalcodes.info/datasets)).
+- **[Ecuador & Guayaquil 6-Digit Postal Code Directory (`090101–090505` Agencia Nacional Postal)](https://pablocirre.github.io/postalcodes-info-open-data/guides/ecuador-guayaquil-and-latin-america-postal-codes.html)** — Parish-level lookup for Guayaquil (`090150` General, `090505` Tarqui/La Alborada/Urdesa/Kennedy, `090313` Centro) and Quito (`170102–170150`) ([Ecuador Hub](https://postalcodes.info/postal-codes/ecuador)).
+- **[European Postal Code Architecture: Netherlands PostNL (`1012 JS`), Sweden `Postnummer` (`Län`), Germany `PLZ` & Ireland `Eircode`](https://pablocirre.github.io/postalcodes-info-open-data/guides/europe-postnl-postnummer-and-deutsche-post-plz-architecture.html)** — Comparative engineering matrix with 2x Retina cartography ([Netherlands](https://postalcodes.info/postal-codes/netherlands) · [Sweden](https://postalcodes.info/postal-codes/sweden) · [Berlin](https://postalcodes.info/postal-codes/germany/berlin) · [Ireland](https://postalcodes.info/postal-codes/ireland)).
+- **[PostalCodes.info `/llms.txt` v3.0 AI Grounding Specification](https://postalcodes.info/llms.txt)** & **[Model Context Protocol Manifest (`/.well-known/mcp.json`)](https://postalcodes.info/.well-known/mcp.json)**.
