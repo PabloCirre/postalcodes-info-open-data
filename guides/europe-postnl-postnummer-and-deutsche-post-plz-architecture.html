@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>European Postal Code Architecture: Netherlands PostNL, Sweden Postnummer, Germany PLZ &amp; Ireland Eircode · PostalCodes.info</title>
+  <meta name="description" content="Technical GIS reference for European postal systems: Netherlands PostNL (1012 JS), Sweden Postnummer to County (Län) mapping, Germany 5-digit PLZ (Berlin 10115–14199), and Ireland 7-character Eircode.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://pablocirre.github.io/postalcodes-info-open-data/guides/europe-postnl-postnummer-and-deutsche-post-plz-architecture.html">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #0f172a; background: #f8fafc; margin: 0; padding: 32px 18px; line-height: 1.65; }
+    main { max-width: 980px; margin: 0 auto; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 16px; padding: 32px; }
+    h1 { font-size: 27px; margin: 0 0 12px; color: #0f172a; }
+    h2 { font-size: 20px; margin: 26px 0 10px; color: #0f172a; }
+    .tldr { background: #f0f9ff; border-left: 5px solid #0284c7; padding: 16px 20px; border-radius: 10px; margin: 16px 0 24px; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+    th, td { border: 1px solid #cbd5e1; padding: 10px 12px; text-align: left; }
+    th { background: #f1f5f9; font-weight: 700; }
+    a { color: #0284c7; font-weight: 700; text-decoration: none; }
+    figure { margin: 24px 0; padding: 16px; background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 12px; }
+    figure img { width: 100%; height: auto; border-radius: 8px; }
+    figcaption { font-size: 13px; color: #475569; margin-top: 8px; }
+  </style>
+</head>
+<body>
+<main>
+  <p style="font-size:12px; font-weight:800; color:#0284c7; text-transform:uppercase; letter-spacing:0.06em; margin:0 0 6px;">European Geodesic &amp; Logistics Engineering · 2026</p>
+  <h1>European Postal Code Architecture: Netherlands (`1012 JS`), Sweden (`Postnummer`), Germany (`PLZ`) &amp; Ireland (`Eircode`)</h1>
+  <div class="tldr">
+    <strong>Executive Summary (BLUF):</strong> European postal systems divide into two distinct engineering architectures in the <strong><a href="https://postalcodes.info/">PostalCodes.info Global Geodesic &amp; UPU S42 Registry</a></strong>: (1) high-granularity alphanumeric street/door identifiers in the <strong><a href="https://postalcodes.info/postal-codes/netherlands">Netherlands PostNL (`9999 AA` format, e.g., `1012 JS` Amsterdam)</a></strong> and <strong><a href="https://postalcodes.info/postal-codes/ireland">Ireland Eircode (`A65 F4E2` 7-character door-level Routing Keys `D01–D24`)</a></strong>, and (2) hierarchical 5-digit numeric zone systems in <strong><a href="https://postalcodes.info/postal-codes/sweden">Sweden PostNord (`100 00–984 99` mapped to `Län` counties)</a></strong> and <strong><a href="https://postalcodes.info/postal-codes/germany/berlin">Germany Deutsche Post PLZ (`10115–14199` Berlin across 190 Zustellbezirke)</a></strong>.
+  </div>
+
+  <h2>1. Comparative Matrix of Key European Postal Architectures</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Country &amp; Authority</th>
+        <th>UPU S42 Pattern</th>
+        <th>Primary Capital / Hub Range</th>
+        <th>Canonical Directory &amp; GIS Lookup</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Netherlands (PostNL)</strong></td>
+        <td><code>NNNN AA</code> (e.g. <code>1012 JS</code>)</td>
+        <td>Amsterdam (<code>1011–1109</code>), Rotterdam (<code>3011–3089</code>), The Hague (<code>2491–2597</code>)</td>
+        <td><a href="https://postalcodes.info/postal-codes/netherlands">PostalCodes.info Netherlands Postcode Directory</a></td>
+      </tr>
+      <tr>
+        <td><strong>Sweden (PostNord)</strong></td>
+        <td><code>NNN NN</code> (e.g. <code>111 22</code>)</td>
+        <td>Stockholms län (<code>10–19</code>), Skåne län (<code>20–29</code>), Västra Götalands län (<code>40–47</code>)</td>
+        <td><a href="https://postalcodes.info/postal-codes/sweden">PostalCodes.info Sweden Postnummer-to-County (`Län`) Guide</a></td>
+      </tr>
+      <tr>
+        <td><strong>Germany (Deutsche Post)</strong></td>
+        <td><code>NNNNN</code> (e.g. <code>10115</code>)</td>
+        <td>Berlin (<code>10115–14199</code>), Düsseldorf (<code>40210–40629</code>), Frankfurt (<code>60306–65936</code>)</td>
+        <td><a href="https://postalcodes.info/postal-codes/germany/berlin">PostalCodes.info Berlin PLZ Directory (10115–14199)</a></td>
+      </tr>
+      <tr>
+        <td><strong>Ireland (An Post Eircode)</strong></td>
+        <td><code>A65 F4E2</code> (139 Routing Keys)</td>
+        <td>Dublin (<code>D01–D24</code>, <code>D6W</code>), Cork (<code>T12–T45</code>), Galway (<code>H91</code>)</td>
+        <td><a href="https://postalcodes.info/postal-codes/ireland">PostalCodes.info Ireland Eircode Routing Key Hub</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <figure>
+    <a href="https://postalcodes.info/postal-code-radius-calculator">
+      <img src="https://postalcodes.info/assets/infographics/dach-benelux-cross-border-logistics-radius-2026.webp" alt="DACH & Benelux Cross-Border Haversine Catchment Density (DE/CH/AT/NL/BE/FR 2026) — Source: PostalCodes.info" width="1200" height="675">
+    </a>
+    <figcaption>Figure 1: Cross-border Haversine radius search (`cross_border=1`) across DACH &amp; Benelux resolves 5-digit DE/FR PLZs and 4-digit CH/AT/NL/BE postcodes simultaneously. Source: <a href="https://postalcodes.info/postal-code-radius-calculator">PostalCodes.info Cross-Border Radius Calculator</a>.</figcaption>
+  </figure>
+
+  <figure>
+    <a href="https://postalcodes.info/postal-codes/ireland">
+      <img src="https://postalcodes.info/assets/infographics/ireland-eircode-routing-key-architecture-2026.webp" alt="Ireland 7-Character Eircode Routing Key Architecture (D01-D24 Dublin & A-Y Counties 2026) — Source: PostalCodes.info" width="1200" height="675">
+    </a>
+    <figcaption>Figure 2: Ireland's 139 An Post Routing Keys (`D01–D24`, `D6W` &amp; `A–Y`) paired with 4-character unique building identifiers. Source: <a href="https://postalcodes.info/postal-codes/ireland">PostalCodes.info Ireland Eircode Directory</a>.</figcaption>
+  </figure>
+</main>
+</body>
+</html>
